@@ -3,7 +3,9 @@ var dust = require("dustjs-linkedin");
 var cons = require("consolidate");
 
 var app = express();
-app.listen(8021);
+//app.listen(8021);
+//app.listen(process.env.PORT,process.env.OPENSHIFT_NODEJS_IP);
+app.listen(process.env.OPENSHIFT_NODEJS_PORT,process.env.OPENSHIFT_NODEJS_IP);
 
 //-----------------configurando las carpetas estatitas---------------------------
 app.use("/css",express.static(__dirname + "/css")); //el primer "/csss" es un nombre logico y el segundo "csss" es el nombre real(fisico)(carpeta original)
@@ -46,11 +48,12 @@ app.get("/",function(req,res){
 	});
 });
 
+
 //re, request datos en envia el usuario
 //res response, lo que mostramos al usuario
 app.post("/suscribir",function(req,res){
 	console.log("El e-mail es: " + req.body.email);
-	res.send("información resivida");	
+	res.send("información recibida");	
 });
 
 
@@ -65,3 +68,4 @@ app.post("/contactos",function(req,res){
 	
 	
 console.log("Hola mundo");
+
