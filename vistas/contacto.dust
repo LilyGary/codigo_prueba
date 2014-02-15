@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/> <!--El mas recomendable es utf-8 o bien "iso-88591" -->
+		<title>"Ejemplo"</title>
+		<link href='http://fonts.googleapis.com/css?family=Freckle+Face' rel='stylesheet' type='text/css'>
+		<link href="css/estilos.css" rel="stylesheet" />
+		<link href="css/normalize.css" rel="stylesheet" />
+		<link href="imagenes/chela.png" rel="shortcut icon" /> <!--recomendable 32px x 32px de tamaño-->		
+		<style>		
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul id="menu">
+					<li>inicio</li>
+					<li>Productos</li>
+					<li>Blog</li>
+					<li>Acerca</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section id="sectionContactos">
+			<form action="/contactos" method="post">
+					<label for="Nombre">Nombre:</label>
+					<input id="nombre" type="text" name="nombre" />
+					
+					<label for="email">Email:</label>
+					<input id="email" type="email" name="email" required="" />
+					
+					<label for="URL">URL:</label>
+					<input id="URL" type="url" name="url" pattern="http(s)?://[a-zA-Z]+.[a-zA-Z]+" />
+					
+					<label for="Edad">Edad:</label>
+					<input id="Edad" type="number" name="edad" min="18" max="90" step="5" />
+										
+					<label for="Comentario">Comentario:</label>
+					<textarea id="Comentario" name="comentario"> </textarea>
+										
+					<input type="submit" value="Enviar" />	
+				</form>		
+		</section>
+		
+		<footer>
+			<div id="derechos">
+				<span>Mi pagina</span> derechos reservados
+			</div>
+			<div id="redesociales">
+				<img  src="imagenes/facebook.png"/>				
+				<img src="imagenes/googleplus.png"/>							
+				<img src="imagenes/twitter.png"/>		
+				<img src="imagenes/youtube.png"/>				
+			</div>
+						
+		</footer>
+	</body>
+	
+</html>

@@ -1,0 +1,210 @@
+body{				
+				font-family:"Freckle Face";
+				font-size:20px;
+				/*Puede ser en porcentaje o en unidades em, que so nproporcinales al tamaño de la caja que los contiene*/
+				
+			}
+			/* cometarios*/
+			header{
+				/*background-color:#55AAFF; hexadecimal los primeros 2 digitos = rojo, sig dos=verde y los ultimos dos=azul*/
+				background-color:#34302D;
+				border:5px solid #55AAFF;
+				/*border-top:5px solid #55AAFF;*/
+				/*border-botom:5px solid #55AAFF;*/
+			}
+			span{
+				background-color:rgb(50,100,255); /*rgb: rgb(rojo,verde,azul)*/
+			}
+			
+			
+			
+			/*div{
+				background-color:rgba(50,100,255,0.3); RGBA : RGBA(rojo,ver,azul,alpha chanel) , alpha chanel es la transparecia pude 
+															ser del 0-1
+			}*/
+			#sectionImg{
+				padding-top:2em;
+				padding-buttom:2em;
+				background-color:#1F6FBE; /*#6DB33F, #062270*/
+				text-align:center;
+				color:white;
+			}
+			.frase{
+				display:inline-block;				
+				width:30%; /*30% con respecto al ancho del navegador*/								
+			}
+			#bienvenida{
+					background:url("../imagenes/fondo_presentacion.jpg");
+					height:500px;
+					/*width:400px;*/
+					background-repeat:no-repeat;
+					/*background-size:cover;*/
+					/*background-size:50% 70%;*/
+					
+					color:white;
+					text-align:center;
+					line-height:500px; /*para centrar el texto (solo aplica cuando es un renglon) y es con respecto al 
+							tamaño de la imagen de la imagen de fondo que ya se sabe de que tamaño es*/		
+					
+					/*Puede ser en porcentaje o en unidades em, que so nproporcinales al tamaño de la caja que los contiene*/
+					font-size:3em; /*1em= 1 font size de la caja padre, en el caso de fontsize=20, 2em = 40px*/					
+					
+					/*margin-bottom:1em;*/
+					
+					
+					background-attachment:fixed;
+					}
+					/*Para todos los elemntos que estan en menu, pero que sean listas:*/
+				#menu li{
+					display:inline-block;
+					color:white;
+					padding:1em 0.5em 1em 0.5em;
+					margin:0px;
+					
+				}		
+				
+footer{
+	padding:1em;
+	height:8em;
+	color:#FFFFFF;
+	background-color:#34302D	
+}
+
+#suscripcion,#redesociales{
+	width:35%;
+	display:inline-block;
+	
+}
+
+#suscripcion input{
+	display:block;
+	width:50%;
+	
+/*propiedad tiwmpo en segundos funcion de transicion, navegadores actuales*/
+/*transition:width 0.5s linear, height 1s linear;*/ /*para una o mas propiedades animables*/
+/*transition:all 1s linear;*/ /*para todas las  propiedades animables*/
+
+/*el ultimo parametro de tiempo, espra ese tiempo antes de hacer la transicion*/
+transition:all 1s linear 2s; /*para todas las  propiedades animables*/
+
+/*
+ puede ser: 
+ linear
+ ease
+ ease-in
+ ease-out
+ ease-in-out
+ * */
+
+/*para navegadores viejitos(crome y safari): -webkit-transition:width 0.5s linear; */
+-webkit-transition:width 0.5s linear;
+/*para navegadores viejitos(opera): -o-transition:width 0.5s linear; */
+-o-transition:width 0.5s linear;
+/*para navegadores viejitos(explorer 9 y 10): -ms-transition:width 0.5s linear; */
+-ms-transition:width 0.5s linear;
+/*para navegadores viejitos(mozilla): -moz-transition:width 0.5s linear; */
+-moz-transition:width 0.5s linear;
+	
+}
+
+#suscripcion input:focus{
+	width:60%;
+	height:2em;
+}
+
+
+/******************************************/
+/*las transformaciones solo se vencuando van a compañadas de su transicion para wue que sepa en donde iniciar y donde terminar*/
+.frase{
+	transition: all 0.5s ease;
+}
+
+/*para que crezca la imagen*/
+/*.frase:hover{*/
+/*-webkit-transform:scale(1.3);*/ /*psrs chrome*/
+/*-moz-transform:scale(1.3);*/ /*psrs firefox, cambia el tamaño de las imagenes al doble*/	
+/*}*/
+
+/*para que rote la imagen*/
+.frase:hover{
+-webkit-transform:rotate(180deg); /*psrs chrome*/
+-moz-transform:rotate(180deg); /*psrs firefox, cambia el tamaño de las imagenes al doble*/
+	
+/*-webkit-transform:rotatex(180deg);*/ /*psrs chrome*/
+/*-webkit-transform:rotatey(180deg);*/ /*psrs chrome*/
+/*-webkit-transform:rotatex(180deg) rotatey(180deg);*/ /*psrs chrome*/
+
+-webkit-transform:translateX(2em);
+-moz-transform:translateX(2em);
+
+}
+/******************************************/
+
+#redesociales img{
+	display:inline-block;	
+	margin-top:1em;
+	margin-right:0.3em;
+	transition: all 0.5s ease;
+}
+#redesociales img:hover{
+-webkit-transform:rotate(180deg);
+
+}
+
+form input:required:invalid{
+	background:url(../imagenes/incorrecto.png);
+	background-repeat: no-repeat;
+	background-size:20px;
+	background-position:top right;	
+}
+
+
+form input:required:valid{
+	background:url(../imagenes/correcto.png);
+	background-repeat: no-repeat;
+	background-size:20px;
+	background-position:top right;	
+}
+
+.flexible{
+	max-width:100%;
+}
+
+/*Se puede combinar x ejemplo: @media screen and (max-width:200px) and (max-width:420px){ */
+
+@media screen and (max-width:420px){
+	
+	.frase{
+				display:block;				
+				width:100%; /*30% con respecto al ancho del navegador*/								
+			}
+			#bienvenida{
+				padding:1em 0em;
+				line-height:1em;
+				height:auto;
+				
+				
+			}
+			footer{
+				height:auto;
+			}
+			
+	#derechos, #suscripcion{
+		width:100%;
+		display:inline-block;
+	
+}
+
+}
+
+
+
+
+	
+
+
+
+
+
+
+

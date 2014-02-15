@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>Intro a JavaScript</title>
+		<script>
+			//para concatenar texto:
+			/*document.write("<h1>hola mundo</h1>" + "texto 2");
+			document.write(5+4);
+						
+			var nombre="nombre";
+						document.write(nombre);
+			
+			var suma = 3+1;
+			document.write(suma);
+			
+			document.write(5+4+" un texto");
+			document.write(" un texto " + 5 + 4);
+		
+			var $ = "hola";
+			document.write($);
+			
+			//var nombre1 = prompt("escribe tu nombre");
+			//document.write(nombre1);
+			*/
+			
+			/*
+			function suma(a,b){
+				var resultado = a+b;
+				return resultado;			
+			}
+			
+			var resultado =suma(5,6);
+			
+			document.write(resultado);*/
+			
+			
+			/*
+			var suma2 = function(a,b){
+				var resultado = a+b;
+				return resultado;			
+			};
+			var resultado =suma2(5,6);
+			document.write(resultado);
+			*/
+			
+			
+			/*******************************************************/
+			
+			/*Ejemplo de uso de funciones que ejecutan funciones: Lambda:
+			 */
+			/*var suma = function(a,b){
+				var resultado = a+b;
+				return resultado;			
+			};
+			
+			function operacion(miFuncion,a,b) {
+				return miFuncion(a,b);				
+			}
+			
+			var resultado = operacion(suma,4,4);
+			document.write(resultado); */
+			
+			/*******************************************************/
+			
+			/*function operacion(miFuncion,a,b) {
+				return miFuncion(a,b);				
+			}
+			
+			
+			var resultado = operacion(function(a,b){
+				var resultado = a*b;
+				return resultado;},3,4);
+			document.write(resultado);*/
+			
+			/*******************************************************/
+			
+			/*Objetos de javascript:*/
+			/*var persona = {
+				nombre:"Nombre1",
+				edad:20,
+				hablar:function(){
+					document.write("Hola");
+				}
+			};
+			
+			document.write(persona.nombre);
+			document.write(persona.edad);
+			persona.hablar();*/
+			
+			/*******************************************************/
+			
+			/*Ejercicio:*/
+			
+			/*var nom = prompt("Escribe tu nombre.");
+			var dir = prompt("Escribe tu direccon.");
+			var tel = prompt("Escribe tu telefono.");
+			
+			
+			var persona = {
+				nombre:nom + "</br>",
+				direccion:dir + "</br>",
+				telefono:tel + "</br>"
+				};
+				
+			document.write(persona.nombre);
+			document.write(persona.direccion);
+			document.write(persona.telefono);			
+			*/
+					
+			var persona = {};
+			persona.Nombre=prompt("Escribe tu nombre.");					
+			persona.Direccion=prompt("Escribe tu direccion.");
+			persona.Telefono=prompt("Escribe tu telefono.");
+			
+			document.write("Nombre: " + persona.Nombre + "</br>");
+			document.write("Domicilio: " + persona.Direccion + "</br>");
+			document.write("Telefono: " + persona.Telefono + "</br>");
+			
+			
+						
+		</script>
+
+	</head>
+	<body>
+		<!-- nada por ahora en el body -->
+	</body>
+</html>
